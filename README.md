@@ -79,12 +79,12 @@ III. Integration of the Sustainable Development Goal (SDG) into the Project
 
 IV. Instructions for Running the Program
 
-1.System Requirements:
+  1.System Requirements:
 
    a.Ensure you have Python 3.8+ installed on your system.
    b.Install the tkinter library (usually included with standard Python installations).
      
-2. Project Files:
+  2. Project Files:
 
     Ensure the following files are in the same directory:
   
@@ -94,7 +94,7 @@ IV. Instructions for Running the Program
    
       c.community_data.json (optional; if missing, the app will create it automatically).
 
-3.Steps to Run the Program:
+  3.Steps to Run the Program:
 
    a.Open a terminal or command prompt.
    
@@ -104,8 +104,8 @@ IV. Instructions for Running the Program
   
       python main.py
   
-4.Using the Application:
-
+  4.Using the Application:
+  
     a.Upon launching, the main menu will appear, displaying buttons for actions such as requesting support, offering support, viewing requests and offers, and fulfilling claims.
  
     b.Follow on-screen prompts to submit or manage requests and offers.
