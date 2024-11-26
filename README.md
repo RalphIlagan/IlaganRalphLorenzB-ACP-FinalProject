@@ -86,13 +86,13 @@ IV. Instructions for Running the Program
      
 2. Project Files:
 
-  Ensure the following files are in the same directory:
+    Ensure the following files are in the same directory:
   
-    a.main.py
+      a.main.py
    
-    b.communitysupportapp.py
+      b.communitysupportapp.py
    
-    c.community_data.json (optional; if missing, the app will create it automatically).
+      c.community_data.json (optional; if missing, the app will create it automatically).
 
 3.Steps to Run the Program:
 
