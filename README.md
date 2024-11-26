@@ -87,11 +87,12 @@ IV. Instructions for Running the Program
 2. Project Files:
 
   Ensure the following files are in the same directory:
-   a.main.py
+  
+    a.main.py
    
-   b.communitysupportapp.py
+    b.communitysupportapp.py
    
-   c.community_data.json (optional; if missing, the app will create it automatically).
+    c.community_data.json (optional; if missing, the app will create it automatically).
 
 3.Steps to Run the Program:
 
@@ -112,7 +113,9 @@ IV. Instructions for Running the Program
     c.Data entered will be saved automatically in community_data.json for future use.
  
  Resetting Data:
+ 
      a.To clear all requests and offers, click the Reset All button. Confirm the action when prompted.
 
  Exiting the Program:
+ 
     a.To close the application, click the Exit button. Confirm exit if prompted.
