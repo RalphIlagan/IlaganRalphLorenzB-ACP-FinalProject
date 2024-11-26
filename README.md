@@ -50,28 +50,28 @@ Key Functions and Concepts Implemented:
         
  6. Error Handling:
     
-       Uses try-except blocks in load_data to manage corrupt or unreadable JSON files gracefully.
+        Uses try-except blocks in load_data to manage corrupt or unreadable JSON files gracefully.
      
  7. Dynamic Data Interaction:
     
-       add_request and add_offer: Add new requests or offers to the data structure and save changes.
-       view_data: Dynamically displays requests or offers in a tabular format using a Treeview widget.
-       get_status_color: Returns appropriate colors for status tags.
+        add_request and add_offer: Add new requests or offers to the data structure and save changes.
+        view_data: Dynamically displays requests or offers in a tabular format using a Treeview widget.
+        get_status_color: Returns appropriate colors for status tags.
        
  8. Interactive User Dialogs:
     
-       show_input_dialog: Prompts users for multiple inputs (e.g., name, description, contact) in a custom dialog window.
-       Validates input fields to prevent missing or incomplete data.
+        show_input_dialog: Prompts users for multiple inputs (e.g., name, description, contact) in a custom dialog window.
+        Validates input fields to prevent missing or incomplete data.
        
  9. Action and Status Updates:
      
-       fulfill_request and fulfill_offer: Allows users to claim and complete pending requests or offers.
-       claim_request and claim_offer: Updates the status and records provider/beneficiary details for claimed actions.
+        fulfill_request and fulfill_offer: Allows users to claim and complete pending requests or offers.
+        claim_request and claim_offer: Updates the status and records provider/beneficiary details for claimed actions.
        
  11. Administrative Tools:
      
-       reset_all: Clears all requests and offers, providing a clean slate for new interactions.
-       exit_program: Handles graceful exit confirmation for closing the application.
+        reset_all: Clears all requests and offers, providing a clean slate for new interactions.
+        exit_program: Handles graceful exit confirmation for closing the application.
 
 III. Integration of the Sustainable Development Goal (SDG) into the Project
 
