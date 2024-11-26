@@ -73,13 +73,17 @@ IV. Instructions for Running the Program
 2. Project Files:
 Ensure the following files are in the same directory:
    a.main.py
+   
    b.communitysupportapp.py
+   
    c.community_data.json (optional; if missing, the app will create it automatically).
 
 3.Steps to Run the Program:
 
   a.Open a terminal or command prompt.
+  
   b.Navigate to the directory containing the project files.
+  
   c.Run the program using the command:
   
       python main.py
@@ -87,7 +91,9 @@ Ensure the following files are in the same directory:
 4.Using the Application:
 
  a.Upon launching, the main menu will appear, displaying buttons for actions such as requesting support, offering support, viewing requests and offers, and fulfilling claims.
+ 
  b.Follow on-screen prompts to submit or manage requests and offers.
+ 
  c.Data entered will be saved automatically in community_data.json for future use.
  
  Resetting Data:
