@@ -5,24 +5,24 @@ The Community Support System (CommUnity) is a Python-based desktop application d
 
 II. Application of Python Concepts and Libraries
       
-   1. Python Libraries Used:
+Python Libraries Used:
 
 
-   2. Tkinter:
+   1. Tkinter:
          Core library for building the graphical user interface.
          Provides widgets such as Button, Label, Entry, Treeview, Toplevel, and layout containers like Frame.
 
-   3. JSON:
+   2. JSON:
          Handles data persistence by storing requests and offers in a structured format (community_data.json).
 
-   4. OS:
+   3. OS:
          Used to check file existence and manage data file operations (e.g., os.path.exists()).
 
-   5. Messagebox and Simpledialog (Tkinter Extensions):
+   4. Messagebox and Simpledialog (Tkinter Extensions):
          messagebox: Displays dialogs for alerts, warnings, confirmations, and information.
          simpledialog: Prompts users for input with simple dialogs.
 
-   6. TTK (Themed Tkinter Widgets):
+   5. TTK (Themed Tkinter Widgets):
         Used for creating a stylized and interactive Treeview table to display requests and offers.
 
 
