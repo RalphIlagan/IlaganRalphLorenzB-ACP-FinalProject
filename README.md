@@ -9,20 +9,25 @@ Python Libraries Used:
 
 
    1. Tkinter:
+      
          Core library for building the graphical user interface.
          Provides widgets such as Button, Label, Entry, Treeview, Toplevel, and layout containers like Frame.
 
-   2. JSON:
+   3. JSON:
+      
          Handles data persistence by storing requests and offers in a structured format (community_data.json).
 
-   3. OS:
+   5. OS:
+      
          Used to check file existence and manage data file operations (e.g., os.path.exists()).
 
-   4. Messagebox and Simpledialog (Tkinter Extensions):
+   7. Messagebox and Simpledialog (Tkinter Extensions):
+      
          messagebox: Displays dialogs for alerts, warnings, confirmations, and information.
          simpledialog: Prompts users for input with simple dialogs.
 
-   5. TTK (Themed Tkinter Widgets):
+   9. TTK (Themed Tkinter Widgets):
+       
         Used for creating a stylized and interactive Treeview table to display requests and offers.
 
 
