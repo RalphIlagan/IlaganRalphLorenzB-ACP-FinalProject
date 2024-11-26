@@ -81,12 +81,12 @@ IV. Instructions for Running the Program
 
 1.System Requirements:
 
-     a.Ensure you have Python 3.8+ installed on your system.
-     b.Install the tkinter library (usually included with standard Python installations).
+   a.Ensure you have Python 3.8+ installed on your system.
+   b.Install the tkinter library (usually included with standard Python installations).
      
 2. Project Files:
 
-3. Ensure the following files are in the same directory:
+  Ensure the following files are in the same directory:
    a.main.py
    
    b.communitysupportapp.py
