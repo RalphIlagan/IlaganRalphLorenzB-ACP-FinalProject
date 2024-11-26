@@ -70,8 +70,8 @@ Key Functions and Concepts Implemented:
        
  11. Administrative Tools:
      
-        reset_all: Clears all requests and offers, providing a clean slate for new interactions.
-        exit_program: Handles graceful exit confirmation for closing the application.
+         reset_all: Clears all requests and offers, providing a clean slate for new interactions.
+         exit_program: Handles graceful exit confirmation for closing the application.
 
 III. Integration of the Sustainable Development Goal (SDG) into the Project
 
@@ -80,11 +80,13 @@ III. Integration of the Sustainable Development Goal (SDG) into the Project
 IV. Instructions for Running the Program
 
 1.System Requirements:
+
      a.Ensure you have Python 3.8+ installed on your system.
      b.Install the tkinter library (usually included with standard Python installations).
      
 2. Project Files:
-Ensure the following files are in the same directory:
+
+3. Ensure the following files are in the same directory:
    a.main.py
    
    b.communitysupportapp.py
@@ -93,21 +95,21 @@ Ensure the following files are in the same directory:
 
 3.Steps to Run the Program:
 
-  a.Open a terminal or command prompt.
+   a.Open a terminal or command prompt.
+   
+   b.Navigate to the directory containing the project files.
   
-  b.Navigate to the directory containing the project files.
-  
-  c.Run the program using the command:
+   c.Run the program using the command:
   
       python main.py
   
 4.Using the Application:
 
- a.Upon launching, the main menu will appear, displaying buttons for actions such as requesting support, offering support, viewing requests and offers, and fulfilling claims.
+    a.Upon launching, the main menu will appear, displaying buttons for actions such as requesting support, offering support, viewing requests and offers, and fulfilling claims.
  
- b.Follow on-screen prompts to submit or manage requests and offers.
+    b.Follow on-screen prompts to submit or manage requests and offers.
  
- c.Data entered will be saved automatically in community_data.json for future use.
+    c.Data entered will be saved automatically in community_data.json for future use.
  
  Resetting Data:
      a.To clear all requests and offers, click the Reset All button. Confirm the action when prompted.
