@@ -80,8 +80,8 @@ Ensure the following files are in the same directory:
 
   a.Open a terminal or command prompt.
   b.Navigate to the directory containing the project files.
-  
   c.Run the program using the command:
+  
       python main.py
   
 4.Using the Application:
@@ -94,5 +94,4 @@ Ensure the following files are in the same directory:
      a.To clear all requests and offers, click the Reset All button. Confirm the action when prompted.
 
  Exiting the Program:
-
     a.To close the application, click the Exit button. Confirm exit if prompted.
