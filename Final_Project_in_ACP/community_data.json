@@ -1,0 +1,33 @@
+{
+    "requests": [
+        {
+            "name": "tar",
+            "support_type": "tar",
+            "description": "tar",
+            "contact_number": "tar",
+            "status": "Supplied",
+            "provider": "tar",
+            "provider_contact": "tar"
+        },
+        {
+            "name": "ra",
+            "support_type": "ra",
+            "description": "ra",
+            "contact_number": "ra",
+            "status": "Supplied",
+            "provider": "rar",
+            "provider_contact": "ar"
+        }
+    ],
+    "offers": [
+        {
+            "name": "ret",
+            "support_type": "ret",
+            "description": "retre",
+            "contact_number": "ret",
+            "status": "Claimed",
+            "beneficiary": "tar",
+            "beneficiary_contact": "tar"
+        }
+    ]
+}
