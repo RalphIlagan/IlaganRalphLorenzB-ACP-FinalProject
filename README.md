@@ -87,7 +87,7 @@ Python Libraries Used:
 
          • exit_program: Handles graceful exit confirmation for closing the application.
 
-III. Integration of the Sustainable Development Goal (SDG) into the Project
+**III. Integration of the Sustainable Development Goal (SDG) into the Project**
 
 –––––––––––––––––––––––––––––––––––––––––
 
