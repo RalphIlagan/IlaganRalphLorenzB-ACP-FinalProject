@@ -5,9 +5,9 @@
   • The Community Support System (CommUnity) is a Python-based desktop application designed to connect individuals or organizations in need with those offering assistance, fostering collaboration and community resilience. Its intuitive interface allows users to submit and manage support requests and offers efficiently while maintaining transparency and accountability. The application’s primary purpose is to streamline community-driven efforts to address social challenges, promote inclusivity, and support vulnerable populations.
 
 
-II. Application of Python Concepts and Libraries
+**II. Application of Python Concepts and Libraries**
 
-
+–––––––––––––––––––––––––––––––––––––––––
       
 Python Libraries Used:
 
@@ -89,13 +89,15 @@ Python Libraries Used:
 
 III. Integration of the Sustainable Development Goal (SDG) into the Project
 
+–––––––––––––––––––––––––––––––––––––––––
 
+**SDG 11: SUSTAINABLE CITIES AND COMMUNITIES**
 
-   •The Community Support System (CommUnity) aligns with Sustainable Development Goal 11: Sustainable Cities and Communities, which focuses on fostering inclusivity, resilience, and sustainability. The platform connects individuals and organizations by allowing users to submit and fulfill support requests or offers, bridging gaps in local resources and services. By promoting collaboration and resource-sharing, the app enhances community resilience in responding to challenges such as disasters, economic hardships, or social inequalities. Its user-friendly design ensures digital accessibility, empowering marginalized groups to participate actively. Through these efforts, the project supports the creation of more inclusive, sustainable, and resilient urban and rural communities.
+  •The Community Support System (CommUnity) aligns with Sustainable Development Goal 11: Sustainable Cities and Communities, which focuses on fostering inclusivity, resilience, and sustainability. The platform connects individuals and organizations by allowing users to submit and fulfill support requests or offers, bridging gaps in local resources and services. By promoting collaboration and resource-sharing, the app enhances community resilience in responding to challenges such as disasters, economic hardships, or social inequalities. Its user-friendly design ensures digital accessibility, empowering marginalized groups to participate actively. Through these efforts, the project supports the creation of more inclusive, sustainable, and resilient urban and rural communities.
 
-IV. Instructions for Running the Program
+**IV. Instructions for Running the Program**
 
-
+–––––––––––––––––––––––––––––––––––––––––
 
   1.System Requirements:
 
