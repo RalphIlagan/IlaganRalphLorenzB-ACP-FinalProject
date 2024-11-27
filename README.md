@@ -15,6 +15,7 @@ Python Libraries Used:
    1. Tkinter:
       
         • Core library for building the graphical user interface.
+
         • Provides widgets such as Button, Label, Entry, Treeview, Toplevel, and layout containers like Frame.
 
    3. JSON:
