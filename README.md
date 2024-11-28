@@ -2,17 +2,18 @@
 
   # CommUnity
  **Community Support System**
+–––––––––––––––––––––––––––––––––––––––––---------------------------------------------------------------------------------------------------------
 
 **I. Project Overview**
 
----------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------–––––––––––––––––––––––––––––––––––––––––-
 
   • The Community Support System (CommUnity) is a desktop application designed to connect individuals or organizations in need with those offering assistance, fostering collaboration and community resilience. Its intuitive interface allows users to submit and manage support requests and offers efficiently while maintaining transparency and accountability. The application’s primary purpose is to streamline community-driven efforts to address social challenges, promote inclusivity, and support vulnerable populations.
 
 
 **II. Application of Python Concepts and Libraries**
 
-–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
       
 Python Libraries Used:
 
@@ -112,13 +113,13 @@ Python Libraries Used:
      
   2. Project Files:
 
-    Ensure the following files are in the same directory:
+  Ensure the following files are in the same directory:
   
-    a.main.py
+   a.main.py
   
-    b.communitysupportapp.py
+   b.communitysupportapp.py
    
-    c.community_data.json (optional; if missing, the app will create it automatically).
+   c.community_data.json (optional; if missing, the app will create it automatically).
 
   3.Steps to Run the Program:
 
