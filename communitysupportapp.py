@@ -1,44 +1,104 @@
 import tkinter as tk
 from tkinter import messagebox, simpledialog
 from tkinter import ttk
-import json
-import os
+import sqlite3
 
 class CommunitySupportApp:
-    def __init__(self, root, data_file="community_data.json"):
+    def __init__(self, root, db_file="community_data.db"):
         self.root = root
-        self.data_file = data_file
+        self.db_file = db_file
         self.requests = []
         self.offers = []
-        self.load_data()
+        self.create_db()  # Ensure the database and tables are created
+        self.load_data()  # Load data from SQLite database
         self.create_widgets()
 
+    def create_db(self):
+        """Create the SQLite database and tables if they do not exist."""
+        conn = sqlite3.connect(self.db_file)
+        cursor = conn.cursor()
+        cursor.execute('''CREATE TABLE IF NOT EXISTS requests (
+                            id INTEGER PRIMARY KEY AUTOINCREMENT,
+                            name TEXT,
+                            support_type TEXT,
+                            description TEXT,
+                            contact_number TEXT,
+                            status TEXT,
+                            provider TEXT,
+                            provider_contact TEXT)''')
+        
+        cursor.execute('''CREATE TABLE IF NOT EXISTS offers (
+                            id INTEGER PRIMARY KEY AUTOINCREMENT,
+                            name TEXT,
+                            support_type TEXT,
+                            description TEXT,
+                            contact_number TEXT,
+                            status TEXT,
+                            beneficiary TEXT,
+                            beneficiary_contact TEXT)''')
+        conn.commit()
+        conn.close()
+
     def load_data(self):
-        """Load data from the JSON file."""
-        if os.path.exists(self.data_file):
-            try:
-                with open(self.data_file, 'r') as file:
-                    data = json.load(file)
-                    # Ensure all requests and offers have the 'provider' and 'provider_contact' keys
-                    for request in data.get("requests", []):
-                        if 'provider' not in request:
-                            request['provider'] = ""  # Add default provider if missing
-                        if 'provider_contact' not in request:
-                            request['provider_contact'] = ""  # Add default provider contact if missing
-                    for offer in data.get("offers", []):
-                        if 'beneficiary' not in offer:
-                            offer['beneficiary'] = ""  # Add default beneficiary if missing
-                        if 'beneficiary_contact' not in offer:
-                            offer['beneficiary_contact'] = ""  # Add default beneficiary contact if missing
-                    self.requests = data.get("requests", [])
-                    self.offers = data.get("offers", [])
-            except json.JSONDecodeError:
-                messagebox.showerror("Error", "Error loading data from file.")
+        """Load data from the SQLite database."""
+        conn = sqlite3.connect(self.db_file)
+        cursor = conn.cursor()
+
+        # Load requests
+        cursor.execute("SELECT * FROM requests")
+        requests_data = cursor.fetchall()
+        self.requests = [
+            {
+                "name": row[1], 
+                "support_type": row[2], 
+                "description": row[3], 
+                "contact_number": row[4], 
+                "status": row[5],
+                "provider": row[6],
+                "provider_contact": row[7]
+            }
+            for row in requests_data
+        ]
+
+        # Load offers
+        cursor.execute("SELECT * FROM offers")
+        offers_data = cursor.fetchall()
+        self.offers = [
+            {
+                "name": row[1], 
+                "support_type": row[2], 
+                "description": row[3], 
+                "contact_number": row[4], 
+                "status": row[5],
+                "beneficiary": row[6],
+                "beneficiary_contact": row[7]
+            }
+            for row in offers_data
+        ]
+
+        conn.close()
 
     def save_data(self):
-        """Save data to the JSON file."""
-        with open(self.data_file, 'w') as file:
-            json.dump({"requests": self.requests, "offers": self.offers}, file, indent=4)
+        """Save data to the SQLite database."""
+        conn = sqlite3.connect(self.db_file)
+        cursor = conn.cursor()
+
+        # Clear the tables before inserting new data
+        cursor.execute("DELETE FROM requests")
+        cursor.execute("DELETE FROM offers")
+
+        # Insert requests data
+        for request in self.requests:
+            cursor.execute("INSERT INTO requests (name, support_type, description, contact_number, status, provider, provider_contact) VALUES (?, ?, ?, ?, ?, ?, ?)",
+                           (request["name"], request["support_type"], request["description"], request["contact_number"], request["status"], request["provider"], request["provider_contact"]))
+
+        # Insert offers data
+        for offer in self.offers:
+            cursor.execute("INSERT INTO offers (name, support_type, description, contact_number, status, beneficiary, beneficiary_contact) VALUES (?, ?, ?, ?, ?, ?, ?)",
+                           (offer["name"], offer["support_type"], offer["description"], offer["contact_number"], offer["status"], offer["beneficiary"], offer["beneficiary_contact"]))
+
+        conn.commit()
+        conn.close()
 
     def create_widgets(self):
         """Create GUI components."""
@@ -215,7 +275,7 @@ class CommunitySupportApp:
         return status_colors.get(status, "white")
 
     def fulfill_request(self):
-        """Fulfill a request from the list."""
+        """Fulfill a request from the list.""" 
         available_requests = [req for req in self.requests if req['status'] != "Supplied"]
         self.view_data("Requests", available_requests)
 
@@ -237,7 +297,7 @@ class CommunitySupportApp:
         messagebox.showinfo("Claimed", f"Your claim for {item_to_claim['name']} has been marked as supplied!")
 
     def claim_offer(self, name, contact_number, item_to_claim):
-        """Update offer status based on beneficiary details."""
+        """Update offer status based on beneficiary details.""" 
         item_to_claim['status'] = "Claimed"
         item_to_claim['beneficiary'] = name
         item_to_claim['beneficiary_contact'] = contact_number
@@ -246,6 +306,6 @@ class CommunitySupportApp:
         messagebox.showinfo("Claimed", f"Your offer for {item_to_claim['name']} has been claimed!")
 
     def exit_program(self):
-        """Exit the application."""
+        """Exit the application.""" 
         if messagebox.askyesno("Confirm Exit", "Are you sure you want to exit?"):
             self.root.quit()
