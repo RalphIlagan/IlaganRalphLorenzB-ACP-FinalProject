@@ -86,7 +86,9 @@
 
 **SDG 11: SUSTAINABLE CITIES AND COMMUNITIES**
 
-  •The Community Support System (CommUnity) aligns with Sustainable Development Goal 11: Sustainable Cities and Communities, which focuses on fostering inclusivity, resilience, and sustainability. The platform connects individuals and organizations by allowing users to submit and fulfill support requests or offers, bridging gaps in local resources and services. By promoting collaboration and resource-sharing, the app enhances community resilience in responding to challenges such as disasters, economic hardships, or social inequalities. Its user-friendly design ensures digital accessibility, empowering marginalized groups to participate actively. Through these efforts, the project supports the creation of more inclusive, sustainable, and resilient urban and rural communities.
+  •The Community Support System (CommUnity) aligns with Sustainable Development Goal 11: Sustainable Cities and Communities, which aims to promote inclusivity, resilience, and sustainability. This platform connects individuals and organizations by allowing users to submit and fulfill support requests or offers, helping to bridge gaps in local resources and services. By fostering collaboration and resource-sharing, CommUnity contributes to strengthening community resilience in addressing challenges such as disasters, economic crises, or social inequalities. The app's design prioritizes ease of use and accessibility for marginalized groups, empowering them to participate actively. In this way, the project supports the creation of more inclusive, sustainable, and resilient urban and rural communities.
+
+CommUnity expands support and assistance within local communities, not only strengthening individuals' capacity but also promoting unity and cooperation on a larger scale. By leveraging technology, it helps improve living conditions and address critical needs in communities that may not always be reached by traditional support systems.
 
 **IV. Instructions for Running the Program**
 
