@@ -73,11 +73,11 @@
     
       • Database Interaction: This library is used to interact with an SQLite database. It is used to store, retrieve, and update requests and offers data persistently across app restarts.
      
-  5.ttk (from tkinter):
+   5.ttk (from tkinter):
 
-   • Themed Widgets: ttk is used for theming widgets like Treeview, which is used to display tabular data. It enhances the visual appearance by applying modern styles and themes to the app’s widgets.
+    • Themed Widgets: ttk is used for theming widgets like Treeview, which is used to display tabular data. It enhances the visual appearance by applying modern styles and themes to the app’s widgets.
 
-   • Treeview Widget: Specifically used to create and display requests and offers in a tabular format with customizable columns.
+    • Treeview Widget: Specifically used to create and display requests and offers in a tabular format with customizable columns.
      
 
 **III. Integration of the Sustainable Development Goal (SDG) into the Project**
@@ -97,6 +97,7 @@ CommUnity expands support and assistance within local communities, not only stre
  **1. Prerequisites:**
     
   • Python: Make sure you have Python 3 installed. You can download it from python.org.
+  
   • Libraries: The app uses tkinter for the GUI and sqlite3 for the database, both of which come with Python by default, so no extra installations are needed.
      
  **2. Download or Copy the Code:**
