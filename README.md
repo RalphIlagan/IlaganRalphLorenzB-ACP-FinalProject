@@ -15,7 +15,7 @@
 
 ------------------------------------------
       
-Python Concepts:
+**Python Concepts:**
 
 
    1. Object-Oriented Programming (OOP):
@@ -53,7 +53,7 @@ Python Concepts:
         • The app is designed with methods that handle specific tasks (e.g., view_requests, add_request, save_data), making it easy to update or extend the app without affecting other parts of the code. 
       
 
-Libraries used:
+**Libraries used:**
 
    1. tkinter:
     
@@ -75,10 +75,9 @@ Libraries used:
      
   5.ttk (from tkinter):
 
-    • Themed Widgets: ttk is used for theming widgets like Treeview, which is used to display tabular data. It enhances the visual appearance by applying modern styles and themes to the app’s widgets.
+  • Themed Widgets: ttk is used for theming widgets like Treeview, which is used to display tabular data. It enhances the visual appearance by applying modern styles and themes to the app’s widgets.
 
-   
-    • Treeview Widget: Specifically used to create and display requests and offers in a tabular format with customizable columns.
+  • Treeview Widget: Specifically used to create and display requests and offers in a tabular format with customizable columns.
      
 
 **III. Integration of the Sustainable Development Goal (SDG) into the Project**
