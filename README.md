@@ -14,7 +14,7 @@
 
 **II. Application of Python Concepts and Libraries**
 
-–––––––––––––––––––––––––––––––––––––––––
+------------------------------------------
       
 Python Libraries Used:
 
@@ -96,7 +96,7 @@ Python Libraries Used:
 
 **III. Integration of the Sustainable Development Goal (SDG) into the Project**
 
-–––––––––––––––––––––––––––––––––––––––––
+------------------------------------------
 
 **SDG 11: SUSTAINABLE CITIES AND COMMUNITIES**
 
@@ -104,7 +104,7 @@ Python Libraries Used:
 
 **IV. Instructions for Running the Program**
 
-–––––––––––––––––––––––––––––––––––––––––
+------------------------------------------
 
   1.System Requirements:
 
