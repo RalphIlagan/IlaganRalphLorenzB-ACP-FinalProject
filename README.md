@@ -1,4 +1,4 @@
-<div align="center"> (https://github.com/user-attachments/assets/dc6b5547-8896-4f19-a15a-5260dbf9955d)
+<div align="center"> <img src="https://github.com/user-attachments/assets/dc6b5547-8896-4f19-a15a-5260dbf9955d">
 
   # CommUnity
  **Community Support System**</div>
