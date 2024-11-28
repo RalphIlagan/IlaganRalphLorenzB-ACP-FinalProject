@@ -48,9 +48,9 @@ Python Concepts:
        
          • The app uses SQLite to persist data. It reads from the database (SELECT), inserts data (INSERT), and updates the database (UPDATE), allowing the application to store and retrieve data across sessions.
 
-   7.. Modularity:
+   7. Modularity:
        
-         • The app is designed with methods that handle specific tasks (e.g., view_requests, add_request, save_data), making it easy to update or extend the app without affecting other parts of the code. 
+        • The app is designed with methods that handle specific tasks (e.g., view_requests, add_request, save_data), making it easy to update or extend the app without affecting other parts of the code. 
       
 
 Libraries used:
@@ -67,17 +67,17 @@ Libraries used:
 
   3. simpledialog (from tkinter):
     
-         • Input Dialogs: simpledialog is used for user input 
+      • Input Dialogs: simpledialog is used for user input 
         
   4. sqlite3
     
-         • Database Interaction: This library is used to interact with an SQLite database. It is used to store, retrieve, and update requests and offers data persistently across app restarts.
+      • Database Interaction: This library is used to interact with an SQLite database. It is used to store, retrieve, and update requests and offers data persistently across app restarts.
      
   5.ttk (from tkinter):
 
-        • Themed Widgets: ttk is used for theming widgets like Treeview, which is used to display tabular data. It enhances the visual appearance by applying modern styles and themes to the app’s widgets.
-        • Treeview Widget: Specifically used to create and display requests and offers in a tabular format with customizable columns.
-       
+      • Themed Widgets: ttk is used for theming widgets like Treeview, which is used to display tabular data. It enhances the visual appearance by applying modern styles and themes to the app’s widgets.
+      • Treeview Widget: Specifically used to create and display requests and offers in a tabular format with customizable columns.
+     
 
 **III. Integration of the Sustainable Development Goal (SDG) into the Project**
 
