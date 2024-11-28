@@ -1,8 +1,7 @@
 ![colorful-people-and-community-logo-vector-54022353](https://github.com/user-attachments/assets/dc6b5547-8896-4f19-a15a-5260dbf9955d)
 
-# COMMUNITY SUPPORT SYSTEM
+# Welcome to COMMUNITY SUPPORT SYSTEM
 
-–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 **I. Project Overview**
 
@@ -95,7 +94,7 @@ Python Libraries Used:
 
 **III. Integration of the Sustainable Development Goal (SDG) into the Project**
 
-–––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––---------------------------------------------------------------------------------------------------------
 
 **SDG 11: SUSTAINABLE CITIES AND COMMUNITIES**
 
@@ -103,7 +102,7 @@ Python Libraries Used:
 
 **IV. Instructions for Running the Program**
 
-–––––––––––––––––––––––––––––––––––––––––
+–––––––––––––––––––––––––––––––––––––––––---------------------------------------------------------------------------------------------------------
 
   1.System Requirements:
 
