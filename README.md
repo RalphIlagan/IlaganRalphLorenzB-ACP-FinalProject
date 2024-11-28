@@ -94,18 +94,18 @@ CommUnity expands support and assistance within local communities, not only stre
 
 ------------------------------------------
 
- 1. **Prerequisites:**
+ **1. Prerequisites:**
     
   • Python: Make sure you have Python 3 installed. You can download it from python.org.
   • Libraries: The app uses tkinter for the GUI and sqlite3 for the database, both of which come with Python by default, so no extra installations are needed.
      
- 2. **Download or Copy the Code:**
+ **2. Download or Copy the Code:**
     
   • Copy the full code and save it into a new Python file named community_support_app.py and main.py in your project folder.
   
   
 
- 3. **Running the Program in VSCode:**
+ **3. Running the Program in VSCode:**
 
    ° Open Visual Studio Code.
     
@@ -115,7 +115,7 @@ CommUnity expands support and assistance within local communities, not only stre
    
    °  Run the Program
    
- 4.**Using the Application:**
+ **4.Using the Application:**
   
   **Request Support:**
 
@@ -123,42 +123,43 @@ CommUnity expands support and assistance within local communities, not only stre
 ° Fill in the Support Type, Description, Your Name, and Contact Number.
 ° Submit your request, and it will be saved in the system.
 
-**Offer Support:**
+ **Offer Support:**
 
 ° Click "Offer Support" to provide help to someone in need.
 ° Enter the Support Type, Description, Your Name, and Contact Number.
 ° Submit your offer, and it will be stored in the system.
 
-**View Requests:**
+ **View Requests:**
 
 ° Click "View Requests" to see a list of all active requests for support.
 
 ° You can view details like name, support type, status, and contact info.
 
-**View Offers:**
+ **View Offers:**
 
 ° Click "View Offers" to see available support offers.
 
 ° View the offers with details like the support type, status, and contact info.
 
-**Fulfill Requests:**
+ **Fulfill Requests:**
 
 ° Click "Fulfill Request" to mark requests as fulfilled and provide the requested support.
 ° Requests will change their status to "Supplied."
 
-**Fulfill Offers:**
+ **Fulfill Offers:**
 
 ° Click "Fulfill Offer" to claim available offers, changing their status to "Claimed."
 
-**Reset All:**
+ **Reset All:**
 
 ° Click "Reset All" to delete all requests and offers in the system (after confirmation).
 
-**Exit:**
+ **Exit:**
 
 ° Click "Exit" to close the app. You can also stop the program by pressing Ctrl + C in the terminal.
 
-5. **SQLite Database:**
+
+**5. SQLite Database:**
 
 ° The app uses an SQLite database (community_data.db) to store all requests, offers, and other details. The database will automatically be created in the same folder as your Python script. The data will persist between sessions, so even after you close the app, the data will still be there when you reopen it.
 
