@@ -41,15 +41,12 @@
        
          • The app uses condition checks and validation to ensure that user inputs are correct (e.g., checking if fields are empty before submitting data). Additionally, it uses messagebox.showwarning to alert the user when there’s an issue.
 
-   5. Lambda Functions:
-       
-         • In the code, lambda functions are not explicitly used, but the approach in button creation could utilize lambda to pass parameters to functions.
 
-   6. File I/O with SQLite:
+   5. File I/O with SQLite:
        
          • The app uses SQLite to persist data. It reads from the database (SELECT), inserts data (INSERT), and updates the database (UPDATE), allowing the application to store and retrieve data across sessions.
 
-   7. Modularity:
+   6. Modularity:
        
         • The app is designed with methods that handle specific tasks (e.g., view_requests, add_request, save_data), making it easy to update or extend the app without affecting other parts of the code. 
       
