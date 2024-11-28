@@ -3,18 +3,18 @@
   # CommUnity
  **Community Support System**
  
-–––––––––––––––––––––––––––––––––––––––––---------------------------------------------------------------------------------------------------------
+–––––––––––––––––––––––––––––––––––––––––-
 
 **I. Project Overview**
 
----------------------------------------------------------------------------------------------------------–––––––––––––––––––––––––––––––––––––––––-
+------------------------------------------
 
   • The Community Support System (CommUnity) is a desktop application designed to connect individuals or organizations in need with those offering assistance, fostering collaboration and community resilience. Its intuitive interface allows users to submit and manage support requests and offers efficiently while maintaining transparency and accountability. The application’s primary purpose is to streamline community-driven efforts to address social challenges, promote inclusivity, and support vulnerable populations.
 
 
 **II. Application of Python Concepts and Libraries**
 
-–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+––––––––––––––––––––––––––––––––––––––––––
       
 Python Libraries Used:
 
@@ -96,7 +96,7 @@ Python Libraries Used:
 
 **III. Integration of the Sustainable Development Goal (SDG) into the Project**
 
-–––––––––––––––––––––––––––––––––––––––––---------------------------------------------------------------------------------------------------------
+–––––––––––––––––––––––––––––––––––––––––-
 
 **SDG 11: SUSTAINABLE CITIES AND COMMUNITIES**
 
@@ -104,7 +104,7 @@ Python Libraries Used:
 
 **IV. Instructions for Running the Program**
 
-–––––––––––––––––––––––––––––––––––––––––---------------------------------------------------------------------------------------------------------
+–––––––––––––––––––––––––––––––––––––––––-
 
   1.System Requirements:
 
