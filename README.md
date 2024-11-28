@@ -11,6 +11,7 @@
   • The Community Support System (CommUnity) is designed to connect individuals or organizations in need with those offering assistance, fostering collaboration and community resilience. Its intuitive interface allows users to submit and manage support requests and offers efficiently while maintaining transparency and accountability. The application’s primary purpose is to streamline community-driven efforts to address social challenges, promote inclusivity, and support vulnerable populations.
 
 
+
 **II. Application of Python Concepts and Libraries**
 
 ------------------------------------------
@@ -75,10 +76,11 @@
      
    5.ttk (from tkinter):
 
-    • Themed Widgets: ttk is used for theming widgets like Treeview, which is used to display tabular data. It enhances the visual appearance by applying modern styles and themes to the app’s widgets.
+   • Themed Widgets: ttk is used for theming widgets like Treeview, which is used to display tabular data. It enhances the visual appearance by applying modern styles and themes to the app’s widgets.
 
-    • Treeview Widget: Specifically used to create and display requests and offers in a tabular format with customizable columns.
+   • Treeview Widget: Specifically used to create and display requests and offers in a tabular format with customizable columns.
      
+
 
 **III. Integration of the Sustainable Development Goal (SDG) into the Project**
 
@@ -90,6 +92,8 @@
 
 CommUnity expands support and assistance within local communities, not only strengthening individuals' capacity but also promoting unity and cooperation on a larger scale. By leveraging technology, it helps improve living conditions and address critical needs in communities that may not always be reached by traditional support systems.
 
+
+
 **IV. Instructions for Running the Program**
 
 ------------------------------------------
@@ -100,6 +104,7 @@ CommUnity expands support and assistance within local communities, not only stre
   
   • Libraries: The app uses tkinter for the GUI and sqlite3 for the database, both of which come with Python by default, so no extra installations are needed.
      
+
  **2. Download or Copy the Code:**
     
   • Copy the full code and save it into a new Python file named community_support_app.py and main.py in your project folder.
@@ -116,6 +121,7 @@ CommUnity expands support and assistance within local communities, not only stre
    
    °  Run the Program
    
+ 
  **4.Using the Application:**
   
   **Request Support:**
@@ -158,6 +164,7 @@ CommUnity expands support and assistance within local communities, not only stre
  **Exit:**
 
 ° Click "Exit" to close the app. You can also stop the program by pressing Ctrl + C in the terminal.
+
 
 
 **5. SQLite Database:**
