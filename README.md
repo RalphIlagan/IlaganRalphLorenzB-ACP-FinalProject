@@ -134,16 +134,16 @@ Python Libraries Used:
   
  4.Using the Application:
   
-    a.Upon launching, the main menu will appear, displaying buttons for actions such as requesting support, offering support, viewing requests and offers, and fulfilling claims.
+  a.Upon launching, the main menu will appear, displaying buttons for actions such as requesting support, offering support, viewing requests and offers, and fulfilling claims.
  
-    b.Follow on-screen prompts to submit or manage requests and offers.
+  b.Follow on-screen prompts to submit or manage requests and offers.
  
-    c.Data entered will be saved automatically in community_data.json for future use.
+  c.Data entered will be saved automatically in community_data.json for future use.
  
 Resetting Data:
  
-      a.To clear all requests and offers, click the Reset All button. Confirm the action when prompted.
+  a.To clear all requests and offers, click the Reset All button. Confirm the action when prompted.
 
  Exiting the Program:
  
-      a.To close the application, click the Exit button. Confirm exit if prompted.
+  a.To close the application, click the Exit button. Confirm exit if prompted.
