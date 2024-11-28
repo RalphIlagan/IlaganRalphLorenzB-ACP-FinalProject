@@ -92,44 +92,72 @@
 
 ------------------------------------------
 
-  1.System Requirements:
-
-   ° Ensure you have Python 3.8+ installed on your system.
-
-   ° Install the tkinter library (usually included with standard Python installations).
+ 1. Prerequisites:
+  • Python: Make sure you have Python 3 installed. You can download it from python.org.
+  • Libraries: The app uses tkinter for the GUI and sqlite3 for the database, both of which come with Python by default, so no extra installations are needed.
      
-  2. Project Files:
-
- •Ensure the following files are in the same directory:
+  2. Download or Copy the Code:
+  • Copy the full code and save it into a new Python file named community_support_app.py and main.py in your project folder.
   
-   ° main.py
   
-   ° communitysupportapp.py
-   
-   ° community_data.json (optional; if missing, the app will create it automatically).
 
-  3.Steps to Run the Program:
+  3. Running the Program in VSCode:
 
-   ° Open a terminal or command prompt.
+   ° Open Visual Studio Code.
     
-   ° Navigate to the directory containing the project files.
-  
-   ° Run the program using the command:
-  
-      python main.py
-  
+   ° Go to File → Open Folder and select the folder where you saved main.py andcommunity_support_app.py.
+   
+   ° Alternatively, you can directly open the file by selecting File → Open File.
+   
+   °  Run the Program
+   
  4.Using the Application:
   
-  ° Upon launching, the main menu will appear, displaying buttons for actions such as requesting support, offering support, viewing requests and offers, and fulfilling claims.
- 
-  ° Follow on-screen prompts to submit or manage requests and offers.
- 
-  ° Data entered will be saved automatically in community_data.json for future use.
- 
-Resetting Data:
- 
-  ° To clear all requests and offers, click the Reset All button. Confirm the action when prompted.
+  **Request Support:**
 
- Exiting the Program:
+° Click "Request Support" to enter details about your need (e.g., groceries, financial aid).
+° Fill in the Support Type, Description, Your Name, and Contact Number.
+° Submit your request, and it will be saved in the system.
+
+**Offer Support:**
+
+° Click "Offer Support" to provide help to someone in need.
+° Enter the Support Type, Description, Your Name, and Contact Number.
+° Submit your offer, and it will be stored in the system.
+
+**View Requests:**
+
+° Click "View Requests" to see a list of all active requests for support.
+
+° You can view details like name, support type, status, and contact info.
+
+**View Offers:**
+
+° Click "View Offers" to see available support offers.
+
+° View the offers with details like the support type, status, and contact info.
+
+**Fulfill Requests:**
+
+° Click "Fulfill Request" to mark requests as fulfilled and provide the requested support.
+° Requests will change their status to "Supplied."
+
+**Fulfill Offers:**
+
+° Click "Fulfill Offer" to claim available offers, changing their status to "Claimed."
+
+**Reset All:**
+
+° Click "Reset All" to delete all requests and offers in the system (after confirmation).
+
+**Exit:**
+
+° Click "Exit" to close the app. You can also stop the program by pressing Ctrl + C in the terminal.
+
+5. **SQLite Database:**
+
+° The app uses an SQLite database (community_data.db) to store all requests, offers, and other details. The database will automatically be created in the same folder as your Python script. The data will persist between sessions, so even after you close the app, the data will still be there when you reopen it.
+
+
+
  
-  ° To close the application, click the Exit button. Confirm exit if prompted.
