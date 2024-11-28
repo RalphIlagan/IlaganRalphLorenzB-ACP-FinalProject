@@ -108,7 +108,7 @@ Python Libraries Used:
 
   1.System Requirements:
 
-    a.Ensure you have Python 3.8+ installed on your system.
+   a.Ensure you have Python 3.8+ installed on your system.
 
    b.Install the tkinter library (usually included with standard Python installations).
      
