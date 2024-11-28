@@ -107,42 +107,42 @@ Python Libraries Used:
 
   1.System Requirements:
 
-   a.Ensure you have Python 3.8+ installed on your system.
+   °Ensure you have Python 3.8+ installed on your system.
 
-   b.Install the tkinter library (usually included with standard Python installations).
+   °Install the tkinter library (usually included with standard Python installations).
      
   2. Project Files:
 
-  Ensure the following files are in the same directory:
+ •Ensure the following files are in the same directory:
   
-   a.main.py
+   °main.py
   
-   b.communitysupportapp.py
+   °communitysupportapp.py
    
-   c.community_data.json (optional; if missing, the app will create it automatically).
+   °community_data.json (optional; if missing, the app will create it automatically).
 
   3.Steps to Run the Program:
 
-   a.Open a terminal or command prompt.
+   °Open a terminal or command prompt.
     
-   b.Navigate to the directory containing the project files.
+   °Navigate to the directory containing the project files.
   
-   c.Run the program using the command:
+   °Run the program using the command:
   
       python main.py
   
  4.Using the Application:
   
-  a.Upon launching, the main menu will appear, displaying buttons for actions such as requesting support, offering support, viewing requests and offers, and fulfilling claims.
+  °Upon launching, the main menu will appear, displaying buttons for actions such as requesting support, offering support, viewing requests and offers, and fulfilling claims.
  
-  b.Follow on-screen prompts to submit or manage requests and offers.
+  °Follow on-screen prompts to submit or manage requests and offers.
  
-  c.Data entered will be saved automatically in community_data.json for future use.
+  °Data entered will be saved automatically in community_data.json for future use.
  
 Resetting Data:
  
-  a.To clear all requests and offers, click the Reset All button. Confirm the action when prompted.
+  °To clear all requests and offers, click the Reset All button. Confirm the action when prompted.
 
  Exiting the Program:
  
-  a.To close the application, click the Exit button. Confirm exit if prompted.
+  °To close the application, click the Exit button. Confirm exit if prompted.
