@@ -1,4 +1,5 @@
-##WELCOME TO COMMUNITY SUPPORT SYSTEM
+  **WELCOME TO COMMUNITY SUPPORT SYSTEM**
+-----------------------------------------
 
 **I. Project Overview**
 
