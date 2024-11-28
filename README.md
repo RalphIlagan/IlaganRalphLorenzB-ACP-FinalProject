@@ -7,7 +7,7 @@
 
 ---------------------------------------------------------------------------------------------------------
 
-  • The Community Support System (CommUnity) is a Python-based desktop application designed to connect individuals or organizations in need with those offering assistance, fostering collaboration and community resilience. Its intuitive interface allows users to submit and manage support requests and offers efficiently while maintaining transparency and accountability. The application’s primary purpose is to streamline community-driven efforts to address social challenges, promote inclusivity, and support vulnerable populations.
+  • The Community Support System (CommUnity) is a desktop application designed to connect individuals or organizations in need with those offering assistance, fostering collaboration and community resilience. Its intuitive interface allows users to submit and manage support requests and offers efficiently while maintaining transparency and accountability. The application’s primary purpose is to streamline community-driven efforts to address social challenges, promote inclusivity, and support vulnerable populations.
 
 
 **II. Application of Python Concepts and Libraries**
@@ -106,37 +106,37 @@ Python Libraries Used:
 
   1.System Requirements:
 
-     a.Ensure you have Python 3.8+ installed on your system.
+    a.Ensure you have Python 3.8+ installed on your system.
 
-     b.Install the tkinter library (usually included with standard Python installations).
+   b.Install the tkinter library (usually included with standard Python installations).
      
   2. Project Files:
 
     Ensure the following files are in the same directory:
   
-      a.main.py
+    a.main.py
+  
+    b.communitysupportapp.py
    
-      b.communitysupportapp.py
-   
-      c.community_data.json (optional; if missing, the app will create it automatically).
+    c.community_data.json (optional; if missing, the app will create it automatically).
 
   3.Steps to Run the Program:
 
-     a.Open a terminal or command prompt.
+   a.Open a terminal or command prompt.
     
-     b.Navigate to the directory containing the project files.
+   b.Navigate to the directory containing the project files.
   
-     c.Run the program using the command:
+   c.Run the program using the command:
   
       python main.py
   
  4.Using the Application:
   
-     a.Upon launching, the main menu will appear, displaying buttons for actions such as requesting support, offering support, viewing requests and offers, and fulfilling claims.
+    a.Upon launching, the main menu will appear, displaying buttons for actions such as requesting support, offering support, viewing requests and offers, and fulfilling claims.
  
-     b.Follow on-screen prompts to submit or manage requests and offers.
+    b.Follow on-screen prompts to submit or manage requests and offers.
  
-     c.Data entered will be saved automatically in community_data.json for future use.
+    c.Data entered will be saved automatically in community_data.json for future use.
  
 Resetting Data:
  
