@@ -75,8 +75,9 @@ Libraries used:
      
   5.ttk (from tkinter):
 
-      • Themed Widgets: ttk is used for theming widgets like Treeview, which is used to display tabular data. It enhances the visual appearance by applying modern styles and themes to the app’s widgets.
-      • Treeview Widget: Specifically used to create and display requests and offers in a tabular format with customizable columns.
+    • Themed Widgets: ttk is used for theming widgets like Treeview, which is used to display tabular data. It enhances the visual appearance by applying modern styles and themes to the app’s widgets.
+   
+    • Treeview Widget: Specifically used to create and display requests and offers in a tabular format with customizable columns.
      
 
 **III. Integration of the Sustainable Development Goal (SDG) into the Project**
