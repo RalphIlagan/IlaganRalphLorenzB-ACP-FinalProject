@@ -15,83 +15,69 @@
 
 ------------------------------------------
       
-Python Libraries Used:
+Python Concepts:
 
 
-   1. Tkinter:
+   1. Object-Oriented Programming (OOP):
       
-         • Core library for building the                graphical user interface.
+         • Classes and Objects: The app is built using a class-based approach. The CommunitySupportApp class contains the main functionality, and methods like request_support, add_request, save_data define 
+         specific behaviors. The instance of this class is created in the main program to run the application.
 
-         • Provides widgets such as Button, Label, Entry, Treeview, Toplevel, and layout containers like Frame.
-
-   3. JSON:
-      
-         • Handles data persistence by storing requests and offers in a structured format (community_data.json).
-
-   5. OS:
-      
-         • Used to check file existence and manage data file operations (e.g., os.path.exists()).
-
-   7. Messagebox and Simpledialog (Tkinter Extensions):
-      
-         • messagebox: Displays dialogs for alerts, warnings, confirmations, and information.
-
-         • simpledialog: Prompts users for input with simple dialogs.
-
-   9. TTK (Themed Tkinter Widgets):
-       
-        • Used for creating a stylized and interactive Treeview table to display requests and offers.
-
-
- Key Functions and Concepts Implemented:
-
-   1. Graphical User Interface (GUI):
+         • Methods: Functions that belong to the class, like create_db, save_data, add_request, etc., define operations that are specific to instances of CommunitySupportApp.
     
-         • create_widgets: Builds the main GUI structure with a menu of buttons for all major actions.
+
+   2. Encapsulation:
+
+         •  The methods within the class (like create_db, add_request, view_data, etc.) encapsulate the logic, ensuring that the internal workings of the app (such as interacting with the database or handling user input) are hidden from the user.
+
+   3. Control Flow:
+      
+         • The app uses conditional statements (if, else) to handle different scenarios, such as confirming actions (if messagebox.askyesno) or checking for empty fields.
+
+         • Loops like (for) are used to iterate over data and create multiple widgets dynamically (e.g., creating buttons or inserting rows into the database).
+
+   4. Error Handling:
+       
+         • The app uses condition checks and validation to ensure that user inputs are correct (e.g., checking if fields are empty before submitting data). Additionally, it uses messagebox.showwarning to alert the user when there’s an issue.
+
+   5. Lambda Functions:
+       
+         • In the code, lambda functions are not explicitly used, but the approach in button creation could utilize lambda to pass parameters to functions.
+
+   6. File I/O with SQLite:
+       
+         • The app uses SQLite to persist data. It reads from the database (SELECT), inserts data (INSERT), and updates the database (UPDATE), allowing the application to store and retrieve data across sessions.
+
+   7.. Modularity:
+       
+         • The app is designed with methods that handle specific tasks (e.g., view_requests, add_request, save_data), making it easy to update or extend the app without affecting other parts of the code. 
+      
+
+Libraries used:
+
+   1. tkinter:
+    
+        • GUI Framework: The tkinter library is used to create the graphical user interface (GUI). Key components like windows, buttons, labels, and text inputs are created using tkinter widgets.
+.
  
-         • Color-Coded Status Indicators: Implements visual cues for Pending, Available, Claimed, and Supplied statuses using Treeview tags and colors.
+  2. messagebox (from tkinter):
+    
+       • Message Boxes: Used to display various message dialogs (e.g., information, warnings, confirmations). The methods like messagebox.showinfo, messagebox.showwarning, and messagebox.askyesno provide interactive pop-up dialogs to the user
+
+
+  3. simpledialog (from tkinter):
+    
+         • Input Dialogs: simpledialog is used for user input 
         
-   3. Data Handling:
+  4. sqlite3
     
-         • load_data: Reads data from community_data.json, initializes requests and offers, and handles missing keys with default values.
-
-         • save_data: Writes current requests and offers back to the JSON file with proper formatting.
-
-   5. Object-Oriented Programming (OOP):
-    
-         • Encapsulates all application logic in the CommunitySupportApp class.
-
-         • Ensures modularity by separating GUI elements, data handling, and user interactions into methods.
-        
-   6. Error Handling:
-    
-         • Uses try-except blocks in load_data to manage corrupt or unreadable JSON files gracefully.
+         • Database Interaction: This library is used to interact with an SQLite database. It is used to store, retrieve, and update requests and offers data persistently across app restarts.
      
-   7. Dynamic Data Interaction:
-    
-         • add_request and add_offer: Add new requests or offers to the data structure and save changes.
+  5.ttk (from tkinter):
 
-         • view_data: Dynamically displays requests or offers in a tabular format using a Treeview widget.
-
-         • get_status_color: Returns appropriate colors for status tags.
+        • Themed Widgets: ttk is used for theming widgets like Treeview, which is used to display tabular data. It enhances the visual appearance by applying modern styles and themes to the app’s widgets.
+        • Treeview Widget: Specifically used to create and display requests and offers in a tabular format with customizable columns.
        
-   8. Interactive User Dialogs:
-    
-         • show_input_dialog: Prompts users for multiple inputs (e.g., name, description, contact) in a custom dialog window.
-
-         • Validates input fields to prevent missing or incomplete data.
-       
-   9. Action and Status Updates:
-     
-         • fulfill_request and fulfill_offer: Allows users to claim and complete pending requests or offers.
-
-         • claim_request and claim_offer: Updates the status and records provider/beneficiary details for claimed actions.
-       
-   11. Administrative Tools:
-     
-         • reset_all: Clears all requests and offers, providing a clean slate for new interactions.
-
-         • exit_program: Handles graceful exit confirmation for closing the application.
 
 **III. Integration of the Sustainable Development Goal (SDG) into the Project**
 
