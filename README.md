@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/user-attachments/assets/dc6b5547-8896-4f19-a15a-5260dbf9955d" width="300"/>
+"![colorful-people-and-community-logo-vector-54022353](https://github.com/user-attachments/assets/dc6b5547-8896-4f19-a15a-5260dbf9955d)" width="300"
 
 
 # Welcome to COMMUNITY SUPPORT SYSTEM
