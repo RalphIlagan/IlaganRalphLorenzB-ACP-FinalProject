@@ -3,6 +3,7 @@
   # CommUnity
  **Community Support System**</div>
  
+------------------------------------------
 
 **I. Project Overview**
 
