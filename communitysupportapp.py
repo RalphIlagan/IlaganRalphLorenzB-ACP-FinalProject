@@ -9,12 +9,11 @@ class CommunitySupportApp:
         self.db_file = db_file
         self.requests = []
         self.offers = []
-        self.create_db()  
+        self.create_db()
         self.load_data()
         self.create_widgets()
 
     def create_db(self):
-        """Create the SQLite database and tables if they do not exist."""
         conn = sqlite3.connect(self.db_file)
         cursor = conn.cursor()
         cursor.execute('''CREATE TABLE IF NOT EXISTS requests (
@@ -40,11 +39,9 @@ class CommunitySupportApp:
         conn.close()
 
     def load_data(self):
-        """Load data from the SQLite database."""
         conn = sqlite3.connect(self.db_file)
         cursor = conn.cursor()
 
-        # Load requests
         cursor.execute("SELECT * FROM requests")
         requests_data = cursor.fetchall()
         self.requests = [
@@ -59,8 +56,7 @@ class CommunitySupportApp:
             }
             for row in requests_data
         ]
-
-        # Load offers
+        
         cursor.execute("SELECT * FROM offers")
         offers_data = cursor.fetchall()
         self.offers = [
@@ -87,12 +83,10 @@ class CommunitySupportApp:
         cursor.execute("DELETE FROM requests")
         cursor.execute("DELETE FROM offers")
 
-       
         for request in self.requests:
             cursor.execute("INSERT INTO requests (name, support_type, description, contact_number, status, provider, provider_contact) VALUES (?, ?, ?, ?, ?, ?, ?)",
                            (request["name"], request["support_type"], request["description"], request["contact_number"], request["status"], request["provider"], request["provider_contact"]))
 
-       
         for offer in self.offers:
             cursor.execute("INSERT INTO offers (name, support_type, description, contact_number, status, beneficiary, beneficiary_contact) VALUES (?, ?, ?, ?, ?, ?, ?)",
                            (offer["name"], offer["support_type"], offer["description"], offer["contact_number"], offer["status"], offer["beneficiary"], offer["beneficiary_contact"]))
@@ -103,7 +97,7 @@ class CommunitySupportApp:
     def create_widgets(self):
         """Create GUI components."""
         self.root.title("Community Support System")
-        self.root.configure(bg="#003366")  # Set background to dark blue (#003366)
+        self.root.configure(bg="#003366") 
 
         header_label = tk.Label(self.root, text="CommUnity", font=("Segoe UI", 30, "bold"), fg="#D8D1B6", bg="#003366")
         header_label.pack(pady=20)
@@ -130,6 +124,7 @@ class CommunitySupportApp:
         menu_frame.grid_columnconfigure(1, weight=1)
 
     def reset_all(self):
+        """Clear all requests and offers."""
         if messagebox.askyesno("Confirm Reset", "Are you sure you want to reset all data?"):
             self.requests.clear()
             self.offers.clear()
@@ -137,6 +132,7 @@ class CommunitySupportApp:
             messagebox.showinfo("Reset Completed", "All data reset.")
 
     def show_input_dialog(self, title, labels, action, *args):
+        """Display an input dialog."""
         dialog = tk.Toplevel(self.root)
         dialog.title(title)
         dialog.configure(bg="#003366")
@@ -177,11 +173,9 @@ class CommunitySupportApp:
         messagebox.showinfo("Request Submitted", "Your request has been submitted!")
 
     def offer_support(self):
-        """Prompt user for a new offer."""
         self.show_input_dialog("Offer Support", ["Support Type", "Description", "Your Name", "Your Contact Number"], self.add_offer)
 
     def add_offer(self, support_type, description, name, contact_number):
-        """Add a new offer."""
         self.offers.append({
             "name": name, 
             "support_type": support_type, 
@@ -209,9 +203,10 @@ class CommunitySupportApp:
         window.title(title)
         window.configure(bg="#003366")
 
+        # Adjust column headers and data for Beneficiary and Contact Info for offers
         if title == "Offers":
             tree = ttk.Treeview(window, columns=("Name", "Support Type", "Description", "Contact Number", "Status", "Beneficiary", "Beneficiary Contact No."), show="headings", selectmode='extended')
-        else:
+        else:  # For requests, we keep Provider and Provider Contact No.
             tree = ttk.Treeview(window, columns=("Name", "Support Type", "Description", "Contact Number", "Status", "Provider", "Provider Contact No."), show="headings", selectmode='extended')
 
         tree.pack(fill="both", expand=True)
@@ -258,7 +253,6 @@ class CommunitySupportApp:
             claim_button.pack(padx=10, pady=10)
 
     def get_status_color(self, status):
-        """Return color based on the status."""
         status_colors = {
             "Pending": "pink",
             "Available": "#90EE90",
@@ -268,10 +262,12 @@ class CommunitySupportApp:
         return status_colors.get(status, "white")
 
     def fulfill_request(self):
+        """Fulfill a request from the list.""" 
         available_requests = [req for req in self.requests if req['status'] != "Supplied"]
         self.view_data("Requests", available_requests)
 
     def fulfill_offer(self):
+        """Fulfill an offer from the list.""" 
         available_offers = [offer for offer in self.offers if offer['status'] == "Available"]
         if not available_offers:
             messagebox.showinfo("No Available Offers", "No available offers to fulfill.")
@@ -295,5 +291,8 @@ class CommunitySupportApp:
         messagebox.showinfo("Claimed", f"Your offer for {item_to_claim['name']} has been claimed!")
 
     def exit_program(self):
+        """Exit the application.""" 
         if messagebox.askyesno("Confirm Exit", "Are you sure you want to exit?"):
             self.root.quit()
+
+
