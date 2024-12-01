@@ -9,8 +9,8 @@ class CommunitySupportApp:
         self.db_file = db_file
         self.requests = []
         self.offers = []
-        self.create_db()  # Ensure the database and tables are created
-        self.load_data()  # Load data from SQLite database
+        self.create_db()  
+        self.load_data()
         self.create_widgets()
 
     def create_db(self):
@@ -87,12 +87,12 @@ class CommunitySupportApp:
         cursor.execute("DELETE FROM requests")
         cursor.execute("DELETE FROM offers")
 
-        # Insert requests data
+       
         for request in self.requests:
             cursor.execute("INSERT INTO requests (name, support_type, description, contact_number, status, provider, provider_contact) VALUES (?, ?, ?, ?, ?, ?, ?)",
                            (request["name"], request["support_type"], request["description"], request["contact_number"], request["status"], request["provider"], request["provider_contact"]))
 
-        # Insert offers data
+       
         for offer in self.offers:
             cursor.execute("INSERT INTO offers (name, support_type, description, contact_number, status, beneficiary, beneficiary_contact) VALUES (?, ?, ?, ?, ?, ?, ?)",
                            (offer["name"], offer["support_type"], offer["description"], offer["contact_number"], offer["status"], offer["beneficiary"], offer["beneficiary_contact"]))
@@ -130,7 +130,6 @@ class CommunitySupportApp:
         menu_frame.grid_columnconfigure(1, weight=1)
 
     def reset_all(self):
-        """Clear all requests and offers."""
         if messagebox.askyesno("Confirm Reset", "Are you sure you want to reset all data?"):
             self.requests.clear()
             self.offers.clear()
@@ -138,7 +137,6 @@ class CommunitySupportApp:
             messagebox.showinfo("Reset Completed", "All data reset.")
 
     def show_input_dialog(self, title, labels, action, *args):
-        """Display an input dialog."""
         dialog = tk.Toplevel(self.root)
         dialog.title(title)
         dialog.configure(bg="#003366")
@@ -197,15 +195,12 @@ class CommunitySupportApp:
         messagebox.showinfo("Offer Submitted", "Your offer has been submitted!")
 
     def view_requests(self):
-        """Display all requests without claim button."""
         self.view_data("Requests", self.requests, show_claim_button=False)
 
     def view_offers(self):
-        """Display all offers without the claim button."""
         self.view_data("Offers", self.offers, show_claim_button=False)
 
     def view_data(self, title, data, show_claim_button=True):
-        """Display requests or offers in a table with color coding."""
         if not data:
             messagebox.showinfo(f"No {title}", f"No {title.lower()} available.")
             return
@@ -214,10 +209,9 @@ class CommunitySupportApp:
         window.title(title)
         window.configure(bg="#003366")
 
-        # Adjust column headers and data for Beneficiary and Contact Info for offers
         if title == "Offers":
             tree = ttk.Treeview(window, columns=("Name", "Support Type", "Description", "Contact Number", "Status", "Beneficiary", "Beneficiary Contact No."), show="headings", selectmode='extended')
-        else:  # For requests, we keep Provider and Provider Contact No.
+        else:
             tree = ttk.Treeview(window, columns=("Name", "Support Type", "Description", "Contact Number", "Status", "Provider", "Provider Contact No."), show="headings", selectmode='extended')
 
         tree.pack(fill="both", expand=True)
@@ -235,7 +229,6 @@ class CommunitySupportApp:
             
             contact_number = item.get('contact_number', "")
             
-            # Check if it is a request or an offer and display appropriate data
             if title == "Offers":
                 beneficiary = item.get('beneficiary', "")
                 beneficiary_contact = item.get('beneficiary_contact', "")
@@ -275,12 +268,10 @@ class CommunitySupportApp:
         return status_colors.get(status, "white")
 
     def fulfill_request(self):
-        """Fulfill a request from the list.""" 
         available_requests = [req for req in self.requests if req['status'] != "Supplied"]
         self.view_data("Requests", available_requests)
 
     def fulfill_offer(self):
-        """Fulfill an offer from the list.""" 
         available_offers = [offer for offer in self.offers if offer['status'] == "Available"]
         if not available_offers:
             messagebox.showinfo("No Available Offers", "No available offers to fulfill.")
@@ -288,7 +279,6 @@ class CommunitySupportApp:
             self.view_data("Offers", available_offers)
 
     def claim_request(self, name, contact_number, item_to_claim):
-        """Update request status based on user input."""
         item_to_claim['status'] = "Supplied"
         item_to_claim['provider'] = name
         item_to_claim['provider_contact'] = contact_number
@@ -297,7 +287,6 @@ class CommunitySupportApp:
         messagebox.showinfo("Claimed", f"Your claim for {item_to_claim['name']} has been marked as supplied!")
 
     def claim_offer(self, name, contact_number, item_to_claim):
-        """Update offer status based on beneficiary details.""" 
         item_to_claim['status'] = "Claimed"
         item_to_claim['beneficiary'] = name
         item_to_claim['beneficiary_contact'] = contact_number
@@ -306,6 +295,5 @@ class CommunitySupportApp:
         messagebox.showinfo("Claimed", f"Your offer for {item_to_claim['name']} has been claimed!")
 
     def exit_program(self):
-        """Exit the application.""" 
         if messagebox.askyesno("Confirm Exit", "Are you sure you want to exit?"):
             self.root.quit()
