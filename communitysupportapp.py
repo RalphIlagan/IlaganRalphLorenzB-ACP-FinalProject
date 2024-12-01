@@ -12,6 +12,31 @@ class CommunitySupportApp:
         self.create_db()
         self.load_data()
         self.create_widgets()
+        
+    def get_combined_data(self):
+        """Retrieve combined data from requests and offers using a JOIN."""
+        conn = sqlite3.connect(self.db_file)
+        cursor = conn.cursor()
+
+        cursor.execute('''
+            SELECT r.name AS request_name,
+            r.support_type AS request_type,
+            r.description AS request_description,
+            r.contact_number AS request_contact,
+            r.status AS request_status,
+            o.name AS offer_name,
+            o.support_type AS offer_type,
+            o.description AS offer_description,
+            o.contact_number AS offer_contact,
+            o.status AS offer_status
+            FROM requests r
+            LEFT JOIN offers o ON r.support_type = o.support_type
+        ''')
+        
+        combined_data = cursor.fetchall()
+        conn.close()
+
+        return combined_data
 
     def create_db(self):
         conn = sqlite3.connect(self.db_file)
@@ -73,6 +98,7 @@ class CommunitySupportApp:
         ]
 
         conn.close()
+        
 
     def save_data(self):
         """Save data to the SQLite database."""
@@ -85,11 +111,11 @@ class CommunitySupportApp:
 
         for request in self.requests:
             cursor.execute("INSERT INTO requests (name, support_type, description, contact_number, status, provider, provider_contact) VALUES (?, ?, ?, ?, ?, ?, ?)",
-                           (request["name"], request["support_type"], request["description"], request["contact_number"], request["status"], request["provider"], request["provider_contact"]))
+                        (request["name"], request["support_type"], request["description"], request["contact_number"], request["status"], request["provider"], request["provider_contact"]))
 
         for offer in self.offers:
             cursor.execute("INSERT INTO offers (name, support_type, description, contact_number, status, beneficiary, beneficiary_contact) VALUES (?, ?, ?, ?, ?, ?, ?)",
-                           (offer["name"], offer["support_type"], offer["description"], offer["contact_number"], offer["status"], offer["beneficiary"], offer["beneficiary_contact"]))
+                        (offer["name"], offer["support_type"], offer["description"], offer["contact_number"], offer["status"], offer["beneficiary"], offer["beneficiary_contact"]))
 
         conn.commit()
         conn.close()
@@ -130,7 +156,7 @@ class CommunitySupportApp:
             self.offers.clear()
             self.save_data()
             messagebox.showinfo("Reset Completed", "All data reset.")
-
+    
     def show_input_dialog(self, title, labels, action, *args):
         """Display an input dialog."""
         dialog = tk.Toplevel(self.root)
@@ -203,10 +229,9 @@ class CommunitySupportApp:
         window.title(title)
         window.configure(bg="#003366")
 
-        # Adjust column headers and data for Beneficiary and Contact Info for offers
         if title == "Offers":
             tree = ttk.Treeview(window, columns=("Name", "Support Type", "Description", "Contact Number", "Status", "Beneficiary", "Beneficiary Contact No."), show="headings", selectmode='extended')
-        else:  # For requests, we keep Provider and Provider Contact No.
+        else:
             tree = ttk.Treeview(window, columns=("Name", "Support Type", "Description", "Contact Number", "Status", "Provider", "Provider Contact No."), show="headings", selectmode='extended')
 
         tree.pack(fill="both", expand=True)
@@ -294,5 +319,3 @@ class CommunitySupportApp:
         """Exit the application.""" 
         if messagebox.askyesno("Confirm Exit", "Are you sure you want to exit?"):
             self.root.quit()
-
-
