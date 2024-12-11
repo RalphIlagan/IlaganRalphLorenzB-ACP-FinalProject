@@ -56,7 +56,7 @@
   3. sqlite3
     
       • Database Interaction: This library is used to interact with an SQLite database. It is used to store, retrieve, and update requests and offers data persistently across app restarts.
-     
+
   4.ttk (from tkinter):
 
    • Themed Widgets: ttk is used for theming widgets like Treeview, which is used to display tabular data. It enhances the visual appearance by applying modern styles and themes to the app’s widgets.
