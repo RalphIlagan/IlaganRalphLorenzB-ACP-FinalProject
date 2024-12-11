@@ -36,9 +36,10 @@
        
          • The app uses SQLite to persist data. It reads from the database (SELECT), inserts data (INSERT), and updates the database (UPDATE), allowing the application to store and retrieve data across sessions.
 
-   4. Modularity:
-       
-        • The app is designed with methods that handle specific tasks (e.g., view_requests, add_request, save_data), making it easy to update or extend the app without affecting other parts of the code. 
+
+   4. Error Handling:
+     
+        • The app uses if any(not value for value in values) to ensure that the user has filled in all fields in a form. If any field is empty, the app will show a warning message.
       
 
 **Libraries used:**
@@ -51,17 +52,12 @@
   2. messagebox (from tkinter):
     
        • Message Boxes: Used to display various message dialogs (e.g., information, warnings, confirmations). The methods like messagebox.showinfo, messagebox.showwarning, and messagebox.askyesno provide interactive pop-up dialogs to the user
-
-
-  3. simpledialog (from tkinter):
-    
-      • Input Dialogs: simpledialog is used for user input 
         
-  4. sqlite3
+  3. sqlite3
     
       • Database Interaction: This library is used to interact with an SQLite database. It is used to store, retrieve, and update requests and offers data persistently across app restarts.
      
-   5.ttk (from tkinter):
+  4.ttk (from tkinter):
 
    • Themed Widgets: ttk is used for theming widgets like Treeview, which is used to display tabular data. It enhances the visual appearance by applying modern styles and themes to the app’s widgets.
 
