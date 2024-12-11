@@ -20,34 +20,23 @@
 **Python Concepts:**
 
 
-   1. Object-Oriented Programming (OOP):
-      
-         • Classes and Objects: The app is built using a class-based approach. The CommunitySupportApp class contains the main functionality, and methods like request_support, add_request, save_data define 
-         specific behaviors. The instance of this class is created in the main program to run the application.
 
-         • Methods: Functions that belong to the class, like create_db, save_data, add_request, etc., define operations that are specific to instances of CommunitySupportApp.
-    
-
-   2. Encapsulation:
+   1. Encapsulation:
 
          •  The methods within the class (like create_db, add_request, view_data, etc.) encapsulate the logic, ensuring that the internal workings of the app (such as interacting with the database or handling user input) are hidden from the user.
 
-   3. Control Flow:
+   2. Control Flow:
       
-         • The app uses conditional statements (if, else) to handle different scenarios, such as confirming actions (if messagebox.askyesno) or checking for empty fields.
+         • The app uses conditional statements (if,elif and else) to handle different scenarios, such as confirming actions (if messagebox.askyesno) or checking for empty fields.
 
          • Loops like (for) are used to iterate over data and create multiple widgets dynamically (e.g., creating buttons or inserting rows into the database).
 
-   4. Error Handling:
-       
-         • The app uses condition checks and validation to ensure that user inputs are correct (e.g., checking if fields are empty before submitting data). Additionally, it uses messagebox.showwarning to alert the user when there’s an issue.
 
-
-   5. File I/O with SQLite:
+   3. File I/O with SQLite:
        
          • The app uses SQLite to persist data. It reads from the database (SELECT), inserts data (INSERT), and updates the database (UPDATE), allowing the application to store and retrieve data across sessions.
 
-   6. Modularity:
+   4. Modularity:
        
         • The app is designed with methods that handle specific tasks (e.g., view_requests, add_request, save_data), making it easy to update or extend the app without affecting other parts of the code. 
       
